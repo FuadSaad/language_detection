@@ -76,7 +76,7 @@ export default function LanguageStats({ detectionCount }) {
                 className="mt-8 text-center"
             >
                 <p className="text-sm text-gray-500">
-                    Powered by <span className="font-semibold text-primary-600">Franc</span> •
+                    Powered by <a href="https://sites.google.com/diu.edu.bd/fuadhossain/home" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary-600 hover:text-primary-700 transition-colors duration-200">Fuad</a> •
                     Statistical Language Detection •
                     Client-side Processing
                 </p>
