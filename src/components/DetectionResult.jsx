@@ -69,7 +69,7 @@ export default function DetectionResult({ result }) {
                     </motion.div>
                 ) : (
                     // Detection result
-                    <div className={`${getConfidenceBgColor(result.confidence)} backdrop-blur-md rounded-3xl p-8 shadow-xl border-2 border-white/50 relative overflow-hidden`}>
+                    <div className={`${getConfidenceBgColor(result.confidence)} backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-white/50 relative overflow-hidden`}>
                         {/* Animated background particles */}
                         <div className="absolute inset-0 pointer-events-none">
                             <motion.div
@@ -103,12 +103,12 @@ export default function DetectionResult({ result }) {
                             />
                         </div>
 
-                        <div className="text-center mb-6 relative z-10">
+                        <div className="text-center mb-4 sm:mb-6 relative z-10">
                             <motion.div
                                 initial={{ scale: 0, rotate: -180 }}
                                 animate={{ scale: 1, rotate: 0 }}
                                 transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                                className="text-8xl mb-4 inline-block"
+                                className="text-6xl sm:text-7xl md:text-8xl mb-3 sm:mb-4 inline-block"
                             >
                                 {result.flag}
                             </motion.div>
@@ -117,23 +117,23 @@ export default function DetectionResult({ result }) {
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="text-4xl font-display font-bold text-gray-800 mb-2"
+                                className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-800 mb-2 px-4"
                             >
                                 {result.name}
                             </motion.h2>
                         </div>
 
                         {/* Confidence meter */}
-                        <div className="mt-8 relative z-10">
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-sm font-semibold text-gray-700">
+                        <div className="mt-6 sm:mt-8 relative z-10 px-2 sm:px-0">
+                            <div className="flex items-center justify-between mb-2 sm:mb-3">
+                                <span className="text-xs sm:text-sm font-semibold text-gray-700">
                                     {getConfidenceLabel(result.confidence)}
                                 </span>
                                 <motion.span
                                     key={displayedConfidence}
                                     initial={{ scale: 1.2 }}
                                     animate={{ scale: 1 }}
-                                    className={`text-2xl font-bold bg-gradient-to-r ${getConfidenceColor(result.confidence)} bg-clip-text text-transparent`}
+                                    className={`text-xl sm:text-2xl font-bold bg-gradient-to-r ${getConfidenceColor(result.confidence)} bg-clip-text text-transparent`}
                                 >
                                     {displayedConfidence}%
                                 </motion.span>

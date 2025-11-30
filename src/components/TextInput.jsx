@@ -28,7 +28,7 @@ export default function TextInput({ value, onChange, onClearAll, charCount }) {
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
                         placeholder="Type or paste any text here to detect its language..."
-                        className="w-full h-64 px-6 py-5 text-lg bg-white/80 backdrop-blur-md border-2 border-primary-200/50 rounded-3xl focus:outline-none focus:border-primary-500 transition-all duration-300 resize-none placeholder-gray-400 shadow-lg"
+                        className="w-full h-48 sm:h-56 md:h-64 px-4 py-4 sm:px-6 sm:py-5 text-base md:text-lg bg-white/80 backdrop-blur-md border-2 border-primary-200/50 rounded-2xl sm:rounded-3xl focus:outline-none focus:border-primary-500 transition-all duration-300 resize-none placeholder-gray-400 shadow-lg"
                         style={{
                             fontFamily: 'inherit',
                         }}
@@ -65,10 +65,10 @@ export default function TextInput({ value, onChange, onClearAll, charCount }) {
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={onClearAll}
-                    className="mt-6 px-8 py-3 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center gap-2 mx-auto group"
+                    className="mt-4 sm:mt-6 px-6 py-2.5 sm:px-8 sm:py-3 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center gap-2 mx-auto group"
                 >
                     <svg
-                        className="w-5 h-5 transition-transform duration-300 group-hover:rotate-12"
+                        className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-12"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ export default function TextInput({ value, onChange, onClearAll, charCount }) {
                     </svg>
                     Clear All
                     <motion.span
-                        className="absolute inset-0 rounded-2xl bg-white opacity-0 group-hover:opacity-20 transition-opacity"
+                        className="absolute inset-0 rounded-xl sm:rounded-2xl bg-white opacity-0 group-hover:opacity-20 transition-opacity"
                         initial={false}
                     />
                 </motion.button>

@@ -71,10 +71,10 @@ function App() {
         <div className="min-h-screen relative">
             <BackgroundAnimation hasResult={!!result} />
 
-            <div className="relative z-10 container mx-auto px-4 py-8">
+            <div className="relative z-10 container mx-auto px-3 sm:px-4 md:px-6 py-6 sm:py-8">
                 <Header />
 
-                <main className="space-y-8">
+                <main className="space-y-6 sm:space-y-8">
                     <TextInput
                         value={text}
                         onChange={handleTextChange}
@@ -97,10 +97,10 @@ function App() {
                         <div className="flex justify-center">
                             <button
                                 onClick={handleClearAll}
-                                className="px-8 py-3 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-2xl font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center gap-2 hover:scale-105"
+                                className="px-6 py-2.5 sm:px-8 sm:py-3 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white rounded-xl sm:rounded-2xl text-sm sm:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center gap-2 hover:scale-105"
                             >
                                 <svg
-                                    className="w-5 h-5"
+                                    className="w-4 h-4 sm:w-5 sm:h-5"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -120,8 +120,8 @@ function App() {
                     <LanguageStats detectionCount={detectionCount} />
                 </main>
 
-                <footer className="text-center mt-16 pb-8">
-                    <p className="text-sm text-gray-500">
+                <footer className="text-center mt-12 sm:mt-14 md:mt-16 pb-6 sm:pb-8 px-4">
+                    <p className="text-xs sm:text-sm text-gray-500">
                         Made with ❤️ using React, Tailwind CSS, and Google Translate API
                     </p>
                 </footer>

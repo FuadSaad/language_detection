@@ -32,19 +32,19 @@ export default function LanguageStats({ detectionCount }) {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="w-full max-w-4xl mx-auto mt-12 mb-8"
         >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {/* Supported Languages */}
                 <motion.div
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
-                    className="bg-gradient-to-br from-primary-50 to-primary-100 backdrop-blur-md rounded-2xl p-6 border-2 border-primary-200/50 shadow-lg"
+                    className="bg-gradient-to-br from-primary-50 to-primary-100 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-primary-200/50 shadow-lg"
                 >
                     <div className="text-center">
-                        <div className="text-4xl mb-3">🌐</div>
-                        <div className="text-4xl font-bold font-display bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent mb-2">
+                        <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">🌐</div>
+                        <div className="text-3xl sm:text-4xl font-bold font-display bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent mb-1 sm:mb-2">
                             {supportedLanguages}+
                         </div>
-                        <div className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                        <div className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide">
                             Supported Languages
                         </div>
                     </div>
@@ -54,14 +54,14 @@ export default function LanguageStats({ detectionCount }) {
                 <motion.div
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
-                    className="bg-gradient-to-br from-accent-50 to-accent-100 backdrop-blur-md rounded-2xl p-6 border-2 border-accent-200/50 shadow-lg"
+                    className="bg-gradient-to-br from-accent-50 to-accent-100 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-accent-200/50 shadow-lg"
                 >
                     <div className="text-center">
-                        <div className="text-4xl mb-3">✨</div>
-                        <div className="text-4xl font-bold font-display bg-gradient-to-r from-accent-600 to-accent-800 bg-clip-text text-transparent mb-2">
+                        <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">✨</div>
+                        <div className="text-3xl sm:text-4xl font-bold font-display bg-gradient-to-r from-accent-600 to-accent-800 bg-clip-text text-transparent mb-1 sm:mb-2">
                             {displayedCount}
                         </div>
-                        <div className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+                        <div className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide">
                             Detections Made
                         </div>
                     </div>
